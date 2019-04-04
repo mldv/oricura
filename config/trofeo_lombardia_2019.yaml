@@ -1,0 +1,80 @@
+# Configurazione Trofeo Lombardia 2019
+# by Marco Della Vedova, 28 mar 2019
+
+source: fiso.it
+
+nome_competizione: Trofeo Lombardia 2019 - XXXI edizione
+
+gare:
+  Montemerlo: [2019186, 03/03/2019]
+  Muggiò: [2019187, 17/03/2019]
+  Bosco Solivo: [2019188, 30/03/2019]
+  Lanzo: [2019189, 12/05/2019]
+  Fuipiano: [2019190, 26/05/2019]
+  Valsessera: [2019172, 09/06/2019]
+  Moltrasio: [2019191, 15/09/2019]
+  Barni: [2019192, 22/09/2019]
+
+categorie: [M12, M14, M16, M18, ME, M35, M45, M55, M65,
+            W12, W14, W16, W18, WE, W35, W45, W55, W65]
+
+punti_vincitore:
+  default: 100
+  M12: 40
+  W12: 40
+  M35: 80
+  W35: 80
+  M45: 80
+  W45: 80
+  M55: 80
+  W55: 80
+  M65: 80
+  W65: 80
+
+min_gare_per_classificato: 3
+
+formula_punteggio: "classica"
+
+recupero_formula: ["mean_best", 2]
+
+n_scarti: 2
+
+annullamenti:
+#  Val Sessera: all
+
+recuperi:
+  Montemerlo:
+    - POLI, Elena
+    - BOZZOLA, Angelo
+    - NEGRI, Federica
+    - GIUGANINO, Barbara
+    - CAGLIO, Roberto
+    - POZZI, Ambrogina
+    - GIULIANI, Luigi
+  Muggiò:
+    - MAISTRELLO, Mariano
+    - GATTI, Giorgio Ernesto
+    - POMPELE, Roberto
+    - FANTIN, Luigi
+    - QUARTO, Anna
+    - GATTI, Francesco
+  Bosco Solivo:
+    - BIELLA, Roberto
+    - TODESCHINI, Maurizio
+    - COZZI, Andrea
+    - SARDELLA, Roberto
+    - PUTZU, Daniela
+    - DONADINI, Fabrizio
+    - BATTISTONI, Luca
+
+cambio_categoria:
+#  Rovegno:
+#    ORTFELDT, Vittoria: W18
+#    DI BACCO, Stella: W14
+#    TOMIELLO, Irene: W16
+
+fixes:
+  POL.IST.SUP.DALLA CHIESA SESTO CALENDE: "DALLA CHIESA - SESTO CALENDE"
+  ATLETICA INTERFLUMINA È PIÙ POMÌ: "ATL. INTERFLUMINA"
+#  0, Gioele: "MERLINI, Gioele"
+#  A.S.D. POLISPORTIVA BESANESE: "POL. BESANESE"

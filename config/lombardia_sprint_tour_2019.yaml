@@ -1,0 +1,47 @@
+# Configurazione Lombardia Sprint Tour 2019
+# by Marco Della Vedova, 28 mar 2019
+
+source: fiso.it
+
+nome_competizione: Lombardia Sprint Tour 2019 - III edizione
+
+gare:
+  Besozza-1: [2019195, 10/3/2019]
+  Besozza-2: [2019227, 10/3/2019]
+  Vedano-1: [2019196, 25/5/2019]
+  Vedano-2: [2019xxx, 25/5/2019]
+  Giussano-1: [2019197, 5/10/2019]
+  Giussano-2: [2019xxx, 5/10/2019]
+  Arona-1: [2019198, 17/11/2019]
+  Arona-2: [2019xxx, 17/11/2019]
+
+categorie: [M12, M14, M16, M18, ME, M35, M45, M55, M65,
+            W12, W14, W16, W18, WE, W35, W45, W55, W65]
+
+punti_vincitore:
+  default: 20
+
+min_gare_per_classificato: 3
+
+formula_punteggio: "lst"
+
+recupero_formula: ["mean_best", 2]
+
+n_scarti: 2
+
+annullamenti:
+#  Val Sessera: all
+
+recuperi:
+#   Besozza-1: ["GALBUSERA, Dario"]
+
+cambio_categoria:
+#  Rovegno:
+#    ORTFELDT, Vittoria: W18
+#    DI BACCO, Stella: W14
+#    TOMIELLO, Irene: W16
+
+fixes:
+  POL.IST.SUP.DALLA CHIESA SESTO CALENDE: "DALLA CHIESA - SESTO CALENDE"
+  ATLETICA INTERFLUMINA È PIÙ POMÌ: "ATL. INTERFLUMINA"
+  TERLANER ORIENTIERUNGSLAEUFER: TERLANER O. L.
