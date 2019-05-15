@@ -14,7 +14,7 @@ Make sure to have the dependencies specified in `requirements.txt`.
 
 Example: 
 ```bash
-python oricura config/trofeo_lombardia_2019.yaml --out classifica.pdf
+python oricura.py config/trofeo_lombardia_2019.yaml --out classifica.pdf
 ```
 
 Supported output format: PDF, CSV, HTML.
