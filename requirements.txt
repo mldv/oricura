@@ -2,3 +2,4 @@ requests
 pandas>=0.24
 jinja2
 weasyprint
+fire

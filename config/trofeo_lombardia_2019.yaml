@@ -1,7 +1,7 @@
 # Configurazione Trofeo Lombardia 2019
 # by Marco Della Vedova, 28 mar 2019
 
-source: fiso.it
+source: fisoit
 
 nome_competizione: Trofeo Lombardia 2019 - XXXI edizione
 
@@ -18,22 +18,9 @@ gare:
 categorie: [M12, M14, M16, M18, ME, M35, M45, M55, M65,
             W12, W14, W16, W18, WE, W35, W45, W55, W65]
 
-punti_vincitore:
-  default: 100
-  M12: 40
-  W12: 40
-  M35: 80
-  W35: 80
-  M45: 80
-  W45: 80
-  M55: 80
-  W55: 80
-  M65: 80
-  W65: 80
-
 min_gare_per_classificato: 3
 
-formula_punteggio: "classica"
+formula_punteggio: "tl"
 
 recupero_formula: ["mean_best", 2]
 
@@ -66,6 +53,16 @@ recuperi:
     - PUTZU, Daniela
     - DONADINI, Fabrizio
     - BATTISTONI, Luca
+    - FILIPELLI, Alessio
+    - CONTE, Simone
+  Lanzo:
+    - CERESA, Giuseppe
+    - GATTI, Giorgio Ernesto
+    - BOCCHIOLA, Paolo
+    - POMPELE, Roberto
+    - GATTI, Francesco
+    - TOMIELLO, Carlo
+    - PESSINA, Eugenio
 
 cambio_categoria:
 #  Rovegno:

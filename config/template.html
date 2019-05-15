@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <style type="text/css">
+        @page { margin: 12mm; }
+
+        @page { size: A4 landscape; }
+
+        body {margin:0; padding:0}
+
+        .title {margin-top: 1em; font-size: 16pt; font-weight: bolder; }
+
+        h2 {font-size: 14pt}
+
+        div {font-size: 11pt}
+
+        .logo {width:30%; display: block; margin-left: auto; margin-right: auto;}
+
+        table, th, td { border-bottom: 1px solid darkgray;}
+
+        td, th {padding: 2pt 4pt;}
+
+        .dataframe {margin-top: 2em; margin-bottom: 2em;
+            border-collapse:collapse; border-spacing:0;
+            font-size: 70%; }
+
+        .dataframe thead th {text-align:center; vertical-align:top; background-color: #78c678
+        }
+
+        .dataframe thead th:nth-child(2),
+        .dataframe thead th:nth-child(3){text-align:left;}
+
+        .dataframe tbody {text-align: right;}
+
+        .dataframe td:nth-child(even) {background-color: #f2f2f2;}
+
+        .dataframe tbody tr td:nth-child(2),
+        .dataframe tbody tr td:nth-child(3) {text-align: left;}
+
+        .dataframe tbody tr td:nth-child(4) {font-weight: bold; }
+
+        .disclaimer {font-size: 9pt;}
+
+        .disclaimer ul {padding-left: 2ch;}
+
+    </style>
+</head>
+<body>
+{% for class, class_rank in rank.groupby("Categoria") %}
+    <img class="logo" src="config/logo.png">
+    <div class="title">{{ title }}</div>
+    <h2>Categoria {{ class }}</h2>
+    <div>Classifica provvisoria. Aggiornamento: {{ now }}</div>
+    {{ ( class_rank
+.drop('Categoria', axis=1)
+.rename({'Posizione': 'Pos'}, axis=1)
+.to_html(index=False, justify='inherit')
+.replace(" | ","<br>")
+) }}
+    <div class="disclaimer"><strong>Note</strong>
+        <ul>
+        <li>L'asterisco * nei punteggi indica il recupero-organizzazione.
+            I punti effettivi saranno assegnati alla chiusura delle classifiche</li>
+        <li>Queste classifiche sono state generate automaticamente da uno script a partire dai risultati ufficiali sul sito fiso.it.
+            Tale script, realizzato da Marco Della Vedova, è in fase sperimentale.
+            Si prega si segnalare eventuali errori a classifiche@fisolombardia.it.</li>
+        </ul>
+    </div>
+    <div style="page-break-after: always" ></div>
+{% endfor %}
+</body>
+</html>
