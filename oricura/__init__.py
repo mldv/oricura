@@ -26,3 +26,5 @@ def main(config_path: str, out='out.pdf'):
     elif out.endswith('html'):
         _exporter.to_html(out)
         print("HTML file successfully generated.")
+    else:
+        log.error("Unkwown output file format (only pdf, html, csv supported)")
